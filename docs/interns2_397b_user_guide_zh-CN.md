@@ -218,18 +218,16 @@ LMDeploy 提供 Anthropic-compatible `/v1/messages` endpoint，Claude Code 可�
 
 ### 官方 Intern API
 
-下文中的 `INTERN_S2_MODEL_ID` 为占位符，待 Intern-S2-397B 的官方 API 模型 ID 公布后替换。
-
 如果不希望自部署 Intern-S2-397B，也可以使用官方 Intern API。请在 [internlm.intern-ai.org.cn](https://internlm.intern-ai.org.cn/) 注册并创建 API token，例如 `sk-xxxxxxxx`。
 
 #### 接入 Agent Framework
 
-官方服务兼容 OpenAI API，因此 agent framework 可以直接使用官方 endpoint。将 base URL 设置为 `https://chat.intern-ai.org.cn/api/v1`，模型名设置为 `INTERN_S2_MODEL_ID`。
+官方服务兼容 OpenAI API，因此 agent framework 可以直接使用官方 endpoint。将 base URL 设置为 `https://chat.intern-ai.org.cn/api/v1`，模型名设置为 `intern-s2-397b`。
 
 ```bash
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://chat.intern-ai.org.cn/api/v1
-export OPENAI_MODEL=INTERN_S2_MODEL_ID
+export OPENAI_MODEL=intern-s2-397b
 ```
 
 可以使用以下请求验证连接：
@@ -239,7 +237,7 @@ curl https://chat.intern-ai.org.cn/api/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer sk-xxxxxxxx" \
   -d '{
-    "model": "INTERN_S2_MODEL_ID",
+    "model": "intern-s2-397b",
     "messages": [
       {"role": "user", "content": "Hello"}
     ],
@@ -259,8 +257,8 @@ Claude Code 可以通过 Intern 的 Anthropic-compatible gateway 调用官方 In
   "env": {
     "ANTHROPIC_BASE_URL": "https://chat.intern-ai.org.cn",
     "ANTHROPIC_AUTH_TOKEN": "your-api-token",
-    "ANTHROPIC_MODEL": "INTERN_S2_MODEL_ID",
-    "ANTHROPIC_SMALL_FAST_MODEL": "INTERN_S2_MODEL_ID"
+    "ANTHROPIC_MODEL": "intern-s2-397b",
+    "ANTHROPIC_SMALL_FAST_MODEL": "intern-s2-397b"
   }
 }
 ```
@@ -268,7 +266,7 @@ Claude Code 可以通过 Intern 的 Anthropic-compatible gateway 调用官方 In
 随后使用以下命令启动 Claude Code：
 
 ```bash
-claude --model INTERN_S2_MODEL_ID
+claude --model intern-s2-397b
 ```
 
 详细接入步骤请参考 [Intern API Claude Code 接入文档](https://internlm.intern-ai.org.cn/docEn/docs/Claude-Code-Integration)。

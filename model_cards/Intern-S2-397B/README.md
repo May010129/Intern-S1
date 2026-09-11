@@ -1,16 +1,14 @@
 ---
 library_name: transformers
 license: apache-2.0
-license_link: ./LICENSE
+license_link: https://huggingface.co/internlm/Intern-S2-397B/blob/main/LICENSE
 pipeline_tag: image-text-to-text
 ---
 
 ## Intern-S2-397B
 
 <div align="center">
-<!-- TODO: Add the Intern-S2-397B title image URL.
-<img src="" />
--->
+<img src="./figs/title.png" />
 
   <div>&nbsp;</div>
 
@@ -40,18 +38,13 @@ We introduce **Intern-S2-397B**, our most capable multimodal foundation model fo
 
 We evaluate the Intern-S2-397B on various benchmarks, including general datasets and scientific datasets. We report the performance comparison with the recent VLMs and LLMs below.
 
-<!-- TODO: Add the Intern-S2-397B general_performance image URL.
-![general_performance]()
--->
-<!-- TODO: Add the Intern-S2-397B scientific_performance image URL.
-![scientific_performance]()
--->
+![performance](./figs/intern-s2-397b.jpg)
 
 
 
 > **Note**: <u>Underline</u> means the best performance among open-sourced models, **Bold** indicates the best performance among all models.
 
-<!-- TODO: Add the confirmed Intern-S2-397B evaluation tools and inference settings. -->
+We use the [OpenCompass](https://github.com/open-compass/OpenCompass/),  [VLMEvalKit](https://github.com/open-compass/vlmevalkit), and [AgentCompass](https://github.com/open-compass/AgentCompass) to evaluate all models. For text reasoning benchmarks, Intern-S2-397B is evaluated with a maximum inference length of 256K tokens, while for multimodal benchmarks, it is evaluated with a maximum inference length of 64K tokens.
 
 
 ## Quick Start
@@ -527,13 +520,11 @@ For a full walkthrough (curl verification, model routing, troubleshooting), see 
 
 ### 2. Official Intern API
 
-Replace `INTERN_S2_MODEL_ID` below with the published Intern API model ID for Intern-S2-397B when available.
-
 If you do not want to self-host, you can use the official Intern API. Register at [internlm.intern-ai.org.cn](https://internlm.intern-ai.org.cn/) and create an API token (`sk-xxxxxxxx`).
 
 #### Connecting Agent Frameworks
 
-The service is OpenAI-compatible, so any agent framework works. You can set the base url to `https://chat.intern-ai.org.cn/api/v1` and the model name to `INTERN_S2_MODEL_ID` in the cli or config file.
+The service is OpenAI-compatible, so any agent framework works. You can set the base url to `https://chat.intern-ai.org.cn/api/v1` and the model name to `intern-s2-397b` in the cli or config file.
 
 You can check the connection with the following command:
 
@@ -542,7 +533,7 @@ curl https://chat.intern-ai.org.cn/api/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer sk-xxxxxxxx" \
   -d '{
-    "model": "INTERN_S2_MODEL_ID",
+    "model": "intern-s2-397b",
     "messages": [
       {"role": "user", "content": "Hello"}
     ],
@@ -562,8 +553,8 @@ Claude Code can route to the official Intern API by pointing `ANTHROPIC_BASE_URL
   "env": {
     "ANTHROPIC_BASE_URL": "https://chat.intern-ai.org.cn",
     "ANTHROPIC_AUTH_TOKEN": "your-api-token",
-    "ANTHROPIC_MODEL": "INTERN_S2_MODEL_ID",
-    "ANTHROPIC_SMALL_FAST_MODEL": "INTERN_S2_MODEL_ID"
+    "ANTHROPIC_MODEL": "intern-s2-397b",
+    "ANTHROPIC_SMALL_FAST_MODEL": "intern-s2-397b"
   }
 }
 ```
@@ -571,7 +562,7 @@ Claude Code can route to the official Intern API by pointing `ANTHROPIC_BASE_URL
 Then start claude code with the following command:
 
 ```bash
-claude --model INTERN_S2_MODEL_ID
+claude --model intern-s2-397b
 ```
 
 For step-by-step setup, see [Intern API × Claude Code Integration](https://internlm.intern-ai.org.cn/docEn/docs/Claude-Code-Integration).

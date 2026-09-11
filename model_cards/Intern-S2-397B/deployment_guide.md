@@ -130,7 +130,7 @@ python3 -m sglang.launch_server \
 ```bash
 SGLANG_ENABLE_SPEC_V2=1 \
 python3 -m sglang.launch_server \
-  --model-path internlm/Intern-S2-397B \
+  --model-path internLM/Intern-S2-397B \
   --trust-remote-code \
   --tp-size 8 \
   --reasoning-parser qwen3 \

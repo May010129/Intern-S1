@@ -1,7 +1,6 @@
 ## Intern-S Series
 
 <div align="center">
-<!-- TODO: Replace the preview banner below with the Intern-S2-397B release image. -->
 <img src="./assets/s2_preview_title.png" />
 
 <div>&nbsp;</div>
@@ -153,19 +152,15 @@ We also released **Intern-S1-mini**, a lightweight version of Intern-S1, which c
 
 ## Performance
 
-We evaluate Intern-S2-Preview-397B, Intern-S2-Preview-35B, and Intern-S1 series models on various benchmarks, including general and scientific datasets. We report performance comparisons with recent VLMs and LLMs below.
+We evaluate Intern-S2-397B, Intern-S2-Preview-397B, Intern-S2-Preview-35B, and Intern-S1 series models on various benchmarks, including general and scientific datasets. We report performance comparisons with recent VLMs and LLMs below.
 
 ### Intern-S2-397B
 
-<!-- TODO: Add the general performance image URL.
-![Intern-S2-397B general performance]()
--->
+![Intern-S2-397B performance](./assets/intern-s2-397b.jpg)
 
-<!-- TODO: Add the scientific performance image URL.
-![Intern-S2-397B scientific performance]()
--->
+> **Note**: <u>Underline</u> means the best performance among open-source models, and **bold** indicates the best performance among all models.
 
-<!-- TODO: Add Intern-S2-397B evaluation results and protocols. -->
+We use [OpenCompass](https://github.com/open-compass/OpenCompass/), [VLMEvalKit](https://github.com/open-compass/vlmevalkit), and [AgentCompass](https://github.com/open-compass/AgentCompass) to evaluate all models. For text reasoning benchmarks, Intern-S2-397B is evaluated with a maximum inference length of 256K tokens; for multimodal benchmarks, the maximum inference length is 64K tokens.
 
 ### Intern-S2-Preview-397B
 

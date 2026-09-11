@@ -218,18 +218,16 @@ For a full walkthrough including curl verification, model routing, and troublesh
 
 ### Official Intern API
 
-Replace `INTERN_S2_MODEL_ID` below with the published Intern API model ID for Intern-S2-397B when available.
-
 If you do not want to self-host Intern-S2-397B, you can use the official Intern API. Register at [internlm.intern-ai.org.cn](https://internlm.intern-ai.org.cn/) and create an API token such as `sk-xxxxxxxx`.
 
 #### Connecting Agent Frameworks
 
-The service is OpenAI-compatible, so agent frameworks can use the official endpoint directly. Set the base URL to `https://chat.intern-ai.org.cn/api/v1` and the model name to `INTERN_S2_MODEL_ID`.
+The service is OpenAI-compatible, so agent frameworks can use the official endpoint directly. Set the base URL to `https://chat.intern-ai.org.cn/api/v1` and the model name to `intern-s2-397b`.
 
 ```bash
 export OPENAI_API_KEY=sk-xxxxxxxx
 export OPENAI_BASE_URL=https://chat.intern-ai.org.cn/api/v1
-export OPENAI_MODEL=INTERN_S2_MODEL_ID
+export OPENAI_MODEL=intern-s2-397b
 ```
 
 You can verify the connection with the following request:
@@ -239,7 +237,7 @@ curl https://chat.intern-ai.org.cn/api/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer sk-xxxxxxxx" \
   -d '{
-    "model": "INTERN_S2_MODEL_ID",
+    "model": "intern-s2-397b",
     "messages": [
       {"role": "user", "content": "Hello"}
     ],
@@ -259,8 +257,8 @@ Claude Code can route to the official Intern API by pointing `ANTHROPIC_BASE_URL
   "env": {
     "ANTHROPIC_BASE_URL": "https://chat.intern-ai.org.cn",
     "ANTHROPIC_AUTH_TOKEN": "your-api-token",
-    "ANTHROPIC_MODEL": "INTERN_S2_MODEL_ID",
-    "ANTHROPIC_SMALL_FAST_MODEL": "INTERN_S2_MODEL_ID"
+    "ANTHROPIC_MODEL": "intern-s2-397b",
+    "ANTHROPIC_SMALL_FAST_MODEL": "intern-s2-397b"
   }
 }
 ```
@@ -268,7 +266,7 @@ Claude Code can route to the official Intern API by pointing `ANTHROPIC_BASE_URL
 Then start Claude Code with the following command:
 
 ```bash
-claude --model INTERN_S2_MODEL_ID
+claude --model intern-s2-397b
 ```
 
 For step-by-step setup, see [Intern API Claude Code Integration](https://internlm.intern-ai.org.cn/docEn/docs/Claude-Code-Integration).

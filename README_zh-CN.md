@@ -1,7 +1,6 @@
 ## 书生 Intern-S 系列
 
 <div align="center">
-<!-- TODO：将下方 Preview 标题图替换为 Intern-S2-397B 正式版图片。 -->
 <img src="./assets/s2_preview_title.png" />
 
 <div>&nbsp;</div>
@@ -150,19 +149,15 @@ Intern-S1 基于一个 235B 的 MoE 语言模型 (Qwen3) 和一个 6B 的视觉�
 
 ## 性能评估
 
-我们在多个通用数据集和科学数据集上评估了 Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 系列模型的表现，并与近期的视觉语言模型（VLM）和大语言模型（LLM）进行了对比，结果如下所示。
+我们在多个通用数据集和科学数据集上评估了 Intern-S2-397B、Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 系列模型的表现，并与近期的视觉语言模型（VLM）和大语言模型（LLM）进行了对比，结果如下所示。
 
 ### Intern-S2-397B
 
-<!-- TODO：补充通用任务性能图片链接。
-![Intern-S2-397B 通用任务性能]()
--->
+![Intern-S2-397B 性能](./assets/intern-s2-397b.jpg)
 
-<!-- TODO：补充科学任务性能图片链接。
-![Intern-S2-397B 科学任务性能]()
--->
+> **注意**：<u>下划线</u>表示在开源模型中取得最优，**加粗**表示在所有模型中取得最优。
 
-<!-- TODO：补充 Intern-S2-397B 评测结果与评测协议。 -->
+所有模型均使用 [OpenCompass](https://github.com/open-compass/OpenCompass/)、[VLMEvalKit](https://github.com/open-compass/vlmevalkit) 和 [AgentCompass](https://github.com/open-compass/AgentCompass) 进行评测。文本推理基准上，Intern-S2-397B 的最大推理长度为 256K token；多模态基准上的最大推理长度为 64K token。
 
 ### Intern-S2-Preview-397B
 
