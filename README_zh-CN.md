@@ -258,15 +258,7 @@ Intern-S1 基于一个 235B 的 MoE 语言模型 (Qwen3) 和一个 6B 的视觉�
 
 ## 使用指南
 
-### Intern-S2-397B
-
-- Intern-S2-397B 模型使用指南
-
-<!-- TODO：补充 Intern-S2-397B 使用指南链接。 -->
-
-### 历史版本
-
-Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 系列模型能够使用以下推理框架进行部署：
+Intern-S2-397B、Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 系列模型能够使用以下推理框架进行部署：
 
 - LMDeploy
 - vLLM
@@ -274,6 +266,7 @@ Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 系列模型能够�
 
 具体的使用示例和教程请参考以下文档
 
+- Intern-S2-397B 模型使用指南 <!-- TODO：补充 Intern-S2-397B 使用指南链接。 -->
 - [Intern-S2-Preview-397B 模型使用指南](docs/interns2_preview_397b_user_guide_zh-CN.md)
 - [Intern-S2-Preview-35B 模型使用指南](docs/interns2_preview_35b_user_guide_zh-CN.md)
 - [Intern-S1-Pro 模型使用指南](docs/interns1pro_user_guide_zh-CN.md)
