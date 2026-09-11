@@ -270,7 +270,7 @@ Intern-S2-397B, Intern-S2-Preview-397B, Intern-S2-Preview-35B, and Intern-S1 ser
 
 Detailed deployment examples for these frameworks are available in the following guides:
 
-- Intern-S2-397B Model User Guide <!-- TODO: Add the Intern-S2-397B user guide link. -->
+- [Intern-S2-397B Model User Guide](docs/interns2_397b_user_guide.md)
 - [Intern-S2-Preview-397B Model User Guide](docs/interns2_preview_397b_user_guide.md)
 - [Intern-S2-Preview-35B Model User Guide](docs/interns2_preview_35b_user_guide.md)
 - [Intern-S1-Pro Model User Guide](docs/interns1pro_user_guide.md)

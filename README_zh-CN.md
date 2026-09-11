@@ -266,7 +266,7 @@ Intern-S2-397B、Intern-S2-Preview-397B、Intern-S2-Preview-35B 和 Intern-S1 �
 
 具体的使用示例和教程请参考以下文档
 
-- Intern-S2-397B 模型使用指南 <!-- TODO：补充 Intern-S2-397B 使用指南链接。 -->
+- [Intern-S2-397B 模型使用指南](docs/interns2_397b_user_guide_zh-CN.md)
 - [Intern-S2-Preview-397B 模型使用指南](docs/interns2_preview_397b_user_guide_zh-CN.md)
 - [Intern-S2-Preview-35B 模型使用指南](docs/interns2_preview_35b_user_guide_zh-CN.md)
 - [Intern-S1-Pro 模型使用指南](docs/interns1pro_user_guide_zh-CN.md)
